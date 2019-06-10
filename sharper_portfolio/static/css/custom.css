@@ -1,9 +1,69 @@
 #logo {
   float: left;
-  font-size: 1.7em;
+  font-size: 1.5em;
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
 
+}
+
+.navbar a {
+  font-size: 0.9em;
+}
+
+.jumbotron-home {
+  background-image: url("/static/images/jumbotron.jpg");
+  background-size: cover;
+  height: 550px;
+  margin: 20px 0px;
+}
+
+.jumbotron h1 {
+  color: white;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.center-me {
+  text-align: center;
+}
+
+.about {
+  background-color: none;
+  max-width: 700px;
+  margin:30px auto;
+  text-align: left;
+}
+
+.about p {
+  font-size:1.3em;
+}
+
+.about ul li {
+  font-size: 1.2em;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
 }
