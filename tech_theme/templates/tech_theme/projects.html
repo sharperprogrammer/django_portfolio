@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prog Life</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <style type="text/css">
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: black;
+                font-family: 'Roboto', sans-serif;
+            }
+            h1, p {
+                color: orange;
+                margin: 0;
+                padding: 0;
+            }
+            a {
+                text-decoration: none;
+            }
+            #Navbar {
+                width: 100%;
+                height: 50px;
+            }
+            .navbar-link {
+                padding: 15px 15px 0 15px;
+                float: left;
+                color: orange;
+            }
+            .leftmost-link {
+                padding-left: 50px !important;
+            }
+            #main-content {
+                width: 80%;
+                /*min-width: 750px;*/
+                margin: 0 auto;
+                text-align: center;
+            }
+            #main-content-header {
+                width: 50%;
+                margin: 100px auto 0 auto;
+            }
+            .cmd-prompt-line {
+                text-align: left;
+                padding-left: 100px;
+            }
+            #cmd-prompt-div {
+                float: left;
+                width: 25%;
+            }
+            #next-div {
+                width: 50%;
+                float: left;
+                margin: 0 auto;
+            }
+            #last-div {
+                width: 25%;
+                height: 50px;
+                float: left;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="Navbar">
+          <a href="{% url 'tech_home' %}" class="navbar-link leftmost-link">~Home</a>
+          <a href="{% url 'tech_about' %}" class="navbar-link">$About</a>
+          <a href="{% url 'tech_projects' %}" class="navbar-link">$Projects</a>
+          <a href="{% url 'tech_contact' %}" class="navbar-link">$Contact</a>
+        </div>
+        <div id="main-content">
+            <div id="main-content-header">
+                <h1>Projects</h1>
+            </div>
+            <br />
+
+            <div id="cmd-prompt-div">
+                <p class="cmd-prompt-line">C:\></p>
+                <p class="cmd-prompt-line">C:\></p>
+                <p class="cmd-prompt-line">C:\></p>
+                <p class="cmd-prompt-line">C:\></p>
+            </div>
+
+            <div id="next-div">
+                <p> Show off some of your recent projects here. <br />
+                </p>
+            </div>
+
+            <div id="last-div">
+
+            </div>
+        </div>
+
+        <script type="text/javascript">
+
+            adjustForSize();
+
+            $(window).resize(function() {
+                adjustForSize();
+            });
+
+            function adjustForSize() {
+                if ($(window).width() < 700) {
+                    $("#cmd-prompt-div").css("display", "none");
+                    $("#last-div").css("display", "none");
+                    $("#next-div").css("float", "none");
+                    $("#next-div").css("width", "80%");
+                } else {
+                    $("#cmd-prompt-div").css("display", "block");
+                    $("#last-div").css("display", "block");
+                    $("#next-div").css("float", "left");
+                    $("#next-div").css("width", "50%");
+                }
+            }
+
+        </script>
+
+    </body>
+</html>
